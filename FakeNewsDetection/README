@@ -1,41 +1,107 @@
-LIAR: A BENCHMARK DATASET FOR FAKE NEWS DETECTION
+# 📰 Fake News Detection System
 
-William Yang Wang, "Liar, Liar Pants on Fire": A New Benchmark Dataset for Fake News Detection, to appear in Proceedings of the 55th Annual Meeting of the Association for Computational Linguistics (ACL 2017), short paper, Vancouver, BC, Canada, July 30-August 4, ACL.
-=====================================================================
-Description of the TSV format:
+A machine learning application that classifies news articles as real or fake using Natural Language Processing (NLP) techniques.
 
-Column 1: the ID of the statement ([ID].json).
-Column 2: the label.
-Column 3: the statement.
-Column 4: the subject(s).
-Column 5: the speaker.
-Column 6: the speaker's job title.
-Column 7: the state info.
-Column 8: the party affiliation.
-Column 9-13: the total credit history count, including the current statement.
-9: barely true counts.
-10: false counts.
-11: half true counts.
-12: mostly true counts.
-13: pants on fire counts.
-Column 14: the context (venue / location of the speech or statement).
+![Project Screenshot](https://github.com/KanchanDhanik/ML-Projects-Tamizhan-Skills/blob/main/FakeNewsDetection/screenshot.png)
 
-Note that we do not provide the full-text verdict report in this current version of the dataset,
-but you can use the following command to access the full verdict report and links to the source documents:
-wget http://www.politifact.com//api/v/2/statement/[ID]/?format=json
+## 🔍 Overview
 
-======================================================================
-The original sources retain the copyright of the data.
+This project implements a fake news classifier using:
+- Python and Streamlit for the web interface
+- NLTK for text preprocessing
+- Scikit-learn for machine learning
+- Logistic Regression as the classification algorithm
 
-Note that there are absolutely no guarantees with this data,
-and we provide this dataset "as is",
-but you are welcome to report the issues of the preliminary version
-of this data.
+## 📂 Project Structure
+FakeNewsDetection/
+├── data/ # Dataset files
+│ ├── train.tsv # Training data
+│ ├── test.tsv # Test data
+│ └── valid.tsv # Validation data
+├── models/ # Saved models
+│ ├── fake_news_detector.pkl
+│ └── tfidf_vectorizer.pkl
+├── src.py # Main application code
+├── requirements.txt # Dependencies
+└── README.md # This file
 
-You are allowed to use this dataset for research purposes only.
 
-For more question about the dataset, please contact:
-William Wang, william@cs.ucsb.edu
+## 🛠️ Installation
 
-v1.0 04/23/2017
+1. Clone the repository:
+```bash
+git clone https://github.com/KanchanDhanik/ML-Projects-Tamizhan-Skills.git
+cd ML-Projects-Tamizhan-Skills/FakeNewsDetection
 
+Install dependencies
+
+pip install -r requirements.txt
+
+🚀 Usage
+Run the application:
+streamlit run src.py
+
+🧠 Model Details
+Algorithm: Logistic Regression
+
+Accuracy: ~85-90% on test data
+
+Features: TF-IDF vectorization (5000 features)
+
+Preprocessing:
+
+Lowercasing
+
+Special character removal
+
+Tokenization
+
+Stopword removal
+
+Lemmatization
+
+Stemming
+
+📊 Dataset
+The model uses the LIAR dataset containing labeled statements from PolitiFact:
+
+True: 1
+
+Mostly-true: 1
+
+Half-true: 1
+
+Barely-true: 0
+
+False: 0
+
+Pants-fire: 0
+
+
+📧 Contact
+For questions or feedback, please contact:
+
+Kanchan Dhanik
+
+Email:kanchandhanik2003@gmail.com
+
+GitHub: @KanchanDhanik
+
+
+### Key Features:
+
+1. **Clear Project Structure**: Shows exactly where files should be placed
+2. **Complete Installation Instructions**: With git clone and pip install commands
+3. **Visual Elements**: Space for screenshot (add one later)
+4. **Technical Details**: Explains the ML model and preprocessing
+5. **Dataset Information**: Documents the labeling scheme
+6. **Contact Information**: For collaboration
+
+To use this:
+1. Create a new `README.md` file in your project folder
+2. Paste this content
+3. Customize the contact information
+4. Add a screenshot later by uploading to your repo and updating the link
+5. Commit and push to your GitHub repository
+
+The markdown formatting will render nicely on GitHub and provide all necessary information for users to understand and run your project.

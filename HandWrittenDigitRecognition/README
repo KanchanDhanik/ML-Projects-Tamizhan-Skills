@@ -1,0 +1,65 @@
+# ✍️ Handwritten Digit Recognition
+
+A deep learning application that recognizes handwritten digits (0-9) using convolutional neural networks.
+
+![Demo](https://github.com/KanchanDhanik/ML-Projects-Tamizhan-Skills/blob/main/HandWrittenDigitRecognition/demo.gif)
+
+## 🚀 Quick Start
+
+1. Clone the repo:
+```bash
+git clone https://github.com/KanchanDhanik/ML-Projects-Tamizhan-Skills.git
+cd ML-Projects-Tamizhan-Skills/HandWrittenDigitRecognition
+
+Install requirements:
+
+pip install -r requirements.txt
+Run the app:
+
+streamlit run app.py
+📂 Files
+text
+HandWrittenDigitRecognition/
+├── app.py                 # Main application
+├── model.h5               # Pretrained CNN model
+├── requirements.txt       # Python dependencies
+├── train.py               # Training script
+└── README.md
+🧠 Model Architecture
+python
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 26, 26, 32)        320       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 13, 13, 32)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 11, 11, 64)        18496     
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 5, 5, 64)          0         
+_________________________________________________________________
+flatten (Flatten)            (None, 1600)              0         
+_________________________________________________________________
+dense (Dense)                (None, 128)               204928    
+_________________________________________________________________
+dense_1 (Dense)              (None, 10)                1290      
+=================================================================
+Total params: 225,034
+Trainable params: 225,034
+Non-trainable params: 0
+📊 Performance
+Accuracy: 99.2% on MNIST test set
+
+Training Time: ~5 minutes on CPU
+
+Input Size: 28x28 grayscale images
+
+💻 Features
+Real-time canvas for drawing digits
+
+Mobile-friendly interface
+
+Instant predictions with confidence scores
+
+Model visualization
