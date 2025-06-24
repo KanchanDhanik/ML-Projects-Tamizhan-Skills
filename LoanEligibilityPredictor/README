@@ -1,0 +1,134 @@
+Loan Eligibility Predictor
+https://img.shields.io/badge/Prediction-AI%2520Powered-blue https://img.shields.io/badge/Python-3.8%252B-green https://img.shields.io/badge/Web%2520UI-Streamlit-red
+
+A Machine Learning-based web application that predicts whether a loan applicant is eligible for approval based on personal and financial details.
+
+📌 Table of Contents
+Features
+
+Tech Stack
+
+Installation
+
+Usage
+
+Dataset
+
+Model Training
+
+Screenshots
+
+Future Improvements
+
+Contributing
+
+License
+
+✨ Features
+✅ User-Friendly Web Interface (Streamlit)
+✅ Real-Time Loan Eligibility Prediction
+✅ Machine Learning Model (Random Forest Classifier)
+✅ Responsive & Clean UI
+✅ Confidence Score for Decisions
+
+🛠 Tech Stack
+Python
+
+Streamlit (Web App)
+
+Scikit-learn (ML Model)
+
+Pandas & NumPy (Data Processing)
+
+Joblib (Model Saving/Loading)
+
+⚙ Installation
+1. Clone the Repository
+bash
+git clone https://github.com/KanchanDhanik/ML-Projects-Tamizhan-Skills/tree/main/LoanEligibilityPredictor
+cd LoanEligibilityPredictor
+2. Install Dependencies
+bash
+pip install -r requirements.txt
+3. Run the App
+bash
+streamlit run app.py
+App will open at: http://localhost:8501
+
+🚀 Usage
+Fill in the applicant details:
+
+Personal Info (Gender, Education, Employment Status)
+
+Financial Info (Income, Loan Amount, Credit History)
+
+Click "Predict Loan Eligibility"
+
+Get instant approval/rejection with confidence score!
+
+📊 Dataset
+The model is trained on a loan prediction dataset containing:
+
+Features:
+
+Gender, Married, Dependents, Education, Self_Employed
+
+ApplicantIncome, CoapplicantIncome, LoanAmount, Credit_History
+
+Target Variable: Loan_Status (Y/N)
+
+Dataset Source: Kaggle Loan Prediction Dataset
+
+🤖 Model Training
+Algorithm: Random Forest Classifier (~76% Accuracy)
+
+Preprocessing Steps:
+
+Handling missing values
+
+Encoding categorical features
+
+Scaling numerical data
+
+Model Saved As: loan_model.pkl
+
+To retrain the model:
+
+python
+from loan_model import LoanEligibilityPredictor
+predictor = LoanEligibilityPredictor()
+data = predictor.load_data("loan_data.csv")
+predictor.train_model(data)
+📸 Screenshots
+C:\Users\HP\OneDrive\Desktop\ML Projects\LoanEligibilityPredictor\image.png
+
+
+C:\Users\HP\OneDrive\Desktop\ML Projects\LoanEligibilityPredictor\image copy.png
+
+🔮 Future Improvements
+Improve model accuracy (XGBoost, Neural Networks)
+
+Add more features (Employment History, Assets)
+
+Deploy on AWS/Heroku
+
+Explainable AI (SHAP/LIME for decision transparency)
+
+🤝 Contributing
+Contributions are welcome!
+
+Fork the repo
+
+Create a new branch (git checkout -b feature)
+
+Commit changes (git commit -m "Add feature")
+
+Push to branch (git push origin feature)
+
+Open a Pull Request
+
+📞 Contact
+For questions or feedback:
+📧 Email: kanchandhanik2003@gmail.com
+🌐 GitHub: @KanchanDhanik
+
