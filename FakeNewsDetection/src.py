@@ -287,7 +287,7 @@ def main():
                 return
         
         # Input text area
-        news_text = st.text_area("Enter the news article text:", height=200, 
+        news_text = st.text_area("Enter the news article text:", height=200,
                                placeholder="Paste news content here...")
         
         if st.button("Analyze News", type="primary"):
