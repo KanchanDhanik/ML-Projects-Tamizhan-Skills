@@ -1,0 +1,54 @@
+Overview
+This is a Python application that detects emotions from text input using a pre-trained machine learning model. The app loads a trained model, vectorizer, and label encoder to classify text into different emotion categories.
+
+Project Structure
+emotion-app/
+├── models/ (auto-created directory for ML artifacts)
+│   ├── emotion_model.joblib - Pre-trained classification model
+│   ├── label_encoder.joblib - Encodes/decodes emotion labels
+│   └── vectorizer.joblib - Text vectorization component
+├── merged_training.pkl - Training dataset (pickle format)
+└── app.py - Main application file
+
+
+Prerequisites
+Python 3.7+
+
+Required Python packages (install via pip install -r requirements.txt):
+
+scikit-learn
+
+joblib
+
+pandas
+
+numpy
+
+pickle
+
+Installation
+Clone this repository
+
+Navigate to the project directory:cd emotiondetection
+
+Install dependencies
+
+Usage
+Run the application:streamlit run src.py
+
+The application will:
+
+Load the pre-trained model and supporting files from the models/ directory
+
+Process input text to detect emotions
+
+Output the predicted emotion
+
+Customization
+To retrain the model with new data:
+
+Replace merged_training.pkl with your new dataset
+
+Modify the training code in app.py (if needed)
+
+Run the training section to generate new model files
